@@ -24,7 +24,6 @@ public class activity_test1 extends AppCompatActivity {
             return insets;
         });
 
-
         Button backBtn = findViewById(R.id.btn_back);
         Button btnActivity2 = findViewById(R.id.btn_activity_2);
 

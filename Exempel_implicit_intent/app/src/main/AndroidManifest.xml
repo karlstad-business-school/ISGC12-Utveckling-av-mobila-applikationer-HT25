@@ -12,6 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Exempel_implicit_intent">
         <activity
+            android:name=".MainActivity2"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="abc.test.123"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
