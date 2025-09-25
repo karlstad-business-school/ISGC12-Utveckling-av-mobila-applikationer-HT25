@@ -53,8 +53,11 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-
+    @Override
+    protected void onResume(){
+        super.onResume();
+        studentList.setText(Database.instance.printStudents());
+    }
 
     public void removeStudent(View view){
         EditText rID = findViewById(R.id.remove_id);
@@ -62,6 +65,22 @@ public class MainActivity extends AppCompatActivity {
         Database.instance.remove(id);
 
         studentList.setText(Database.instance.printStudents());
+    }
+
+
+
+
+
+
+
+    public void searchStudent(View view){
+        Intent intent = new Intent(MainActivity.this, StudentView.class);
+
+        EditText etID = findViewById(R.id.search_id);
+        int id = Integer.parseInt(etID.getText().toString());
+
+        intent.putExtra("id", id);
+        startActivity(intent);
     }
 
 

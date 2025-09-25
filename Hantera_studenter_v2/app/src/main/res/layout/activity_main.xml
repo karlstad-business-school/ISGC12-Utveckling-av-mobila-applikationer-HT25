@@ -94,6 +94,35 @@
 
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <EditText
+                android:id="@+id/search_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32dp"
+                android:layout_marginRight="12dp"
+                android:hint="ID"
+                android:inputType="number"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="Sök"
+                android:onClick="searchStudent"
+                />
+
+        </LinearLayout>
+
+
+
+
+
 
 
 
