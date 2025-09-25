@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Exempel_background_service_async"
         tools:targetApi="31">
+
+        <service android:name=".MyBackgroundService"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
