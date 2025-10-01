@@ -25,6 +25,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private final String API_KEY = "YOUR_API_KEY";
     private TextView cityText, sunText, setText, tempText;
     private EditText cityET;
     private Button searchButton;
