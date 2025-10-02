@@ -33,11 +33,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        new DataManager();
         new Database();
 
         ArrayList<Student> students = new ArrayList<Student>();
-
+        students = DataManager.instance.readFromFile(this);
         Database.instance.setStudents(students);
+
+
 
 
 
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 Student s = new Student(id, name, pnr);
 
                 Database.instance.add(s);
+                DataManager.instance.writeToFile(MainActivity.this, Database.instance.getStudents());
 
                 studentList.setText(Database.instance.printStudents());
             }
@@ -78,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         int id = Integer.parseInt(rID.getText().toString());
         Database.instance.remove(id);
 
+        DataManager.instance.writeToFile(MainActivity.this, Database.instance.getStudents());
 
         studentList.setText(Database.instance.printStudents());
     }

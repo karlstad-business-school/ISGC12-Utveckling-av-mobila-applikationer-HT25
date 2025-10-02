@@ -57,6 +57,8 @@ public class StudentView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Database.instance.remove(id);
+                DataManager.instance.writeToFile(StudentView.this, Database.instance.getStudents());
+
                 finish();
             }
         });
