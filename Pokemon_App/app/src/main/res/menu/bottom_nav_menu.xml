@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_pokemon"
+        android:icon="@drawable/ic_launcher_background"
+         android:title="Pokémon" />
+    <item
+        android:id="@+id/nav_berry"
+        android:icon="@drawable/ic_launcher_foreground"
+         android:title="Berry" />
+</menu>
